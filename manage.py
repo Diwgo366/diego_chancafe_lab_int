@@ -3,7 +3,10 @@
 import os
 import sys
 
-
+# Comandos usados regularmente:
+#  python manage.py makemigrations - Hacer migraciones
+#  python manage.py migrate - Despues del anterior
+#  python manage.py runserver - Correr el servidor
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pokemon.settings')

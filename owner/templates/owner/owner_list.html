@@ -1,0 +1,28 @@
+{% extends 'owner/base_generic.html' %}
+
+{% block content %}
+
+<body>
+<h1>Bienvenidos!!!</h1>
+{% if nombre and edad %}
+    <h2>El owner existe</h2>
+    <p>Nombre: {{ nombre }}</p>
+    <p>DNI: {{ dni }}</p>
+    <p>País: {{ pais }}</p>
+    {% if edad >= 18 %}
+        <p>Usted es mayor de edad</p>
+    {% else %}
+        <p>Usted aun no es mayor de edad</p>
+    {% endif %}
+    {%  if dni %}
+        {% if not vigente %}
+            <p>Su pase esta por vencer</p>
+        {% endif %}
+    {% endif %}
+{% else %}
+    <p>Todavia no hay ningun owner registrado</p>
+{% endif %}
+
+</body>
+</html>
+{% endblock %}
